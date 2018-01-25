@@ -19,4 +19,10 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
+
+  #With this method, it is necessary to use it in SessionsController.
+  def sign_out
+    session.delete(:user_id)
+    @current_user = nil
+  end
 end
