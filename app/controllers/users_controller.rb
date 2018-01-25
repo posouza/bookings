@@ -7,9 +7,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
       if @user.save
         redirect_to @user, notice: "User was successfully created!"
-        #tire o método de comentário quando criar o helper.
         #User can automatically access the system after registration.
-    #sign_in(@user)
+        sign_in(@user)
     else
       render action: :new
     end
