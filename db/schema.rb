@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20180126012129) do
   enable_extension "plpgsql"
 
   create_table "motels", force: :cascade do |t|
-    t.integer  "user_id"
     t.integer  "code"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
