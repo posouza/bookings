@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :motels
   #Hashed password is more secured
   has_secure_password
   #This prevents user to register with an empty e-mail field.
