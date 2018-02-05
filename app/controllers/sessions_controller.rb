@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-#This method is to prevent the user from logging in again once it's already logged.
+#This method is to prevent the user from logging in again once it's already logged in.
 before_action :block_access, except: [:destroy]
 
   def create
